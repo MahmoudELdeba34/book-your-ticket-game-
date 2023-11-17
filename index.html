@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="game-container">
+        <i class="fa-solid fa-ticket fa-5x"></i>
+        <h1 class="typing"></h1>
+        <p>How many tickets would you like to book?</p>
+        <input type="number" id="numTickets" placeholder="Enter the number of tickets">
+        <button onclick="bookTickets()">Book Tickets</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function bookTickets() {
+        const numTicketsInput = document.getElementById('numTickets');
+        const numTickets = parseInt(numTicketsInput.value);
+
+        if (isNaN(numTickets) || numTickets <= 0) {
+            document.getElementById('result').innerHTML = 'Please enter a valid number of tickets.';
+            return;
+        }
+
+        const resultElement = document.getElementById('result');
+        resultElement.innerHTML = 'Your ticket numbers: ';
+        
+        for (let i = 0; i < numTickets; i++) {
+            const ticketNumber = Math.floor(Math.random() * 1000) + 1; // Random number between 1 and 1000
+            resultElement.innerHTML += ticketNumber + ' ';
+        }
+}
+    </script>
+</body>
+</html>

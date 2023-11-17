@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #430089, #82ffa1);
+    /* background-image: url(—Pngtree—cartoon\ illustration\ comic\ bomb\ gunpowder_12915333.png);
+    background-position: center center;
+    background-size: 100% 100%; */
+
+}
+.typing::after{
+    content: '';
+    animation: typing 10s infinite;
+    animation-play-state: inherit; 
+    color:#fff
+}
+i{
+    color: #fff;
+}
+@keyframes typing{
+    0%{content: 'B|';}
+    35%{content: 'BO|';}
+    10%{content: 'BOO|';}
+    15%{content: 'BOOK|';}
+    20%{content: 'BOO|';}
+    25%{content: 'BO|';}
+    30%{content: 'B|';}
+    35%{content: 'Y|';}
+    40%{content: 'Yo|';}
+    45%{content: 'YOU|';}
+    50%{content: 'YOUR|';}
+    55%{content: 'T|';}
+    60%{content: 'TI|';}
+    65%{content: 'TIC|';}
+    70%{content: 'TICK|';}
+    75%{content: 'TICKE|';}
+    80%{content: 'TICKET|';}
+    85%{content: 'TICKE|';}
+    90%{content: 'TICK|';}
+    94%{content: 'TIC|';}
+    98%{content: 'TI|';}
+    100%{content: 'T|';}
+    
+}
+.game-container {
+    text-align: center;
+}
+
+input {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(77, 158, 158);
+    border-radius: 100vh;
+    border: none;
+    color: #fff;
+    transition: all 2s;
+}
+button:hover{
+    background-color: rgb(217, 111, 111);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
